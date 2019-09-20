@@ -1,34 +1,35 @@
 class Encoder {
   public:
     Encoder(int pinA, int pinB);
-    void getPinA();
-    void getPinB();
-  private: 
-    void setPinA();
-    void setPinB();
+    void Encoder::getPinA() {
+
+    }
+    void Encoder::getPinB() {
+
+    }
+  private:
+    void Encoder::setPinA() {
+
+    }
+    void Encoder::setPinB() {
+
+    }
     int _pinA, _pinB;
 
-
-void Encoder::getPinA() {
-  
-}
-
-void Encoder::getPinB() {
-  
-}
-
-void Encoder::setPinA() {
-  
-}
-
-void Encoder::setPinB() {
-  
-}
-
-}
+};
 
 Encoder::Encoder(int pinA, int pinB) {
   pinMode(pinA, INPUT_PULLUP);
-  attachInterrupt(digitalPintToInterrupt(pinA),readA);
+  attachInterrupt(digitalPinToInterrupt(pinA), readA, CHANGE);
+
+  pinMode(pinB, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(pinB),readB, CHANGE);
+}
+
+void readA() {
+  
+}
+
+void readB() {
   
 }

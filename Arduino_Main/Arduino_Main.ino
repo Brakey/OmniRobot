@@ -8,7 +8,6 @@
 
 int motor[] = {2,3,4};
 
-
 void setup() {
   // put your setup code here, to run once:
 
